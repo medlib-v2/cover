@@ -1,0 +1,32 @@
+{
+  "name": "medlib/cover",
+  "description": "Medlib is a searche Library",
+  "keywords": ["Z3950", "Yaz", "Finder books", "Bibliotheque", "Search books", "Library"],
+  "license": "MIT",
+  "type": "library",
+  "homepage": "https://www.medlib.fr",
+  "Helpers": {
+    "issues": "https://github.com//medlib-v2/cover/issues",
+    "source": "https://github.com//medlib-v2/cover"
+  },
+  "authors": [
+    {
+      "name": "Medlib Team",
+      "email": "noreply-medlib@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "ext-imagick": "*"
+
+  },
+  "replace": {
+    "medlib/cover": "self.version"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Medlib\\BookCover\\" : ""
+    }
+  }
+}
