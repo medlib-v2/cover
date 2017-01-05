@@ -23,8 +23,7 @@ composer require medlib/cover dev-master
 
 Le package nécessite ImageMagick et Ghostscript.
 
-### Exemple d'utilisation
-
+### Configuration
 ```php
 
 require('vendor/autoload.php');
@@ -39,6 +38,24 @@ $cover->setTitle('Manual of scientific illustration')
 	->setDatePublished('1976')
 	->randomizeBackgroundColor()
 	->save('manual_of_scientific.png');
+```
+
+### Exemple d'utilisation
+
+Modifier le fichier `config/app.php` pour rajouter ce qui suit :
+
+```php
+// Autoloaded Service Providers
+'providers' => [
+    ...
+    Medlib\BookCover\Services\CoverServiceProvider::class,
+],
+
+// Class Aliases
+'aliases' => [
+    ...
+    'Cover'   => Medlib\BookCover\Facades\Cover::class,
+],
 ```
 
 Au lieu d'enregistrer la couverture dans un fichier, vous pouvez également obtenir les données d'image et les affichées directement:

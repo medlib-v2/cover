@@ -64,12 +64,12 @@ class BookCover {
     /**
      * @var string  Font name
      */
-    protected $primaryFont = "fonts/books/AvantGarde-Book.ttf";
+    protected $primaryFont = __DIR__ . "/fonts/books/AvantGarde-Book.ttf";
 
     /**
      * @var string  Font name
      */
-    protected $secondaryFont = "fonts/books/Helvetica-Oblique.otf";
+    protected $secondaryFont = __DIR__ . "/fonts/books/Helvetica-Oblique.otf";
 
     /**
      * @var string  Base cover filename
@@ -270,7 +270,7 @@ class BookCover {
             $this->make();
         }
 
-        return base64_encode($this->getImage($maxWidth)->getImageblob());
+        return 'data:image/png;base64,'.base64_encode($this->getImage($maxWidth)->getImageblob());
     }
 
     /**

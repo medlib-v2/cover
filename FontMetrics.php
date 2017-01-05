@@ -95,7 +95,7 @@ class FontMetrics {
 
         $im = new \Imagick();
         $draw = new \ImagickDraw();
-        $draw->setFont('fonts/books/AvantGarde-Book.ttf');
+        $draw->setFont(__DIR__ . '/fonts/books/AvantGarde-Book.ttf');
         $fontSize += 1;
         do {
             $fontSize -= 1;
