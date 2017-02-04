@@ -19,7 +19,6 @@
   "require": {
     "php": ">=5.5.9",
     "ext-imagick": "*"
-
   },
   "replace": {
     "medlib/cover": "self.version"
